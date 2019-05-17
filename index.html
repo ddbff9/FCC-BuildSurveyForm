@@ -7,17 +7,90 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </head>
 <body>
   <div>
     <h1 id="title" class="h1">Survey Form</h1>
   </div>
 
-  <div id="form">
-    <form class="form">
-        <h6 class="h6">Please let us know how we can improve FreeCodeCamp.com</h6>
-
+    <form id="survey-form">
+      <ul class="flex-outer">
+        <p class="h6" id="description">Please let us know how we can improve FreeCodeCamp.com</p>
+        <li>
+          <label for="name" id="name-label">*Name:</label>
+          <input type="text" id="name" placeholder="Enter your name here">
+        </li>
+        <li>
+          <label for="email" id="email-label">*Email:</label>
+          <input type="email" id="email" placeholder="Enter your email here.">
+        </li>
+        <li>
+          <label for="age" id="number-label">*Age:</label>
+          <input type="number" id="number" placeholder="Enter your age here.">
+        </li>
+        <li>
+          <label for="option">Which option best describes your current role?</label>
+            <select id="dropdown">
+              <option value="" disabled selected>Select an option</option>
+              <option value="student">Student</option>
+              <option value="fullTimeJob">Full Time Job</option>
+              <option value="fullTYimeLearner">Full Time    Learner</option>
+              <option value="preferNotToSay">Prefer Not To  Say</option>
+              <option value="other">Other</option>
+            </select>
+        </li>
+        <li>
+          <p>*How likely is that you would recommend freeCodeCamp to a friend?</p>
+          <ul class="flex-inner">
+            <li>
+              <input type="radio" name="recommend" value="definately"> 
+              <label>Definately</label><br>
+            </li>
+            <li>  
+              <input type="radio" name="recommend" value="maybe"> 
+              <label>Maybe</label><br>
+            </li>
+            <li>
+              <input type="radio" name="recommend" value="notSure"> 
+              <label>Not Sure</label>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <label for="likeMost">What do you like most in FCC:</label>
+          <select>
+            <option value="" disabled selected>Select an option</option>
+            <option value="challenges">Challenges</option>
+            <option value="projects">Projects</option>
+            <option value="community">Community</option>
+            <option value="openSource">Open Source</option>
+          </select>
+        </li>
+        <li>
+          <p>Things that should be improved in the future (Check all that apply):</p>
+          <ul class="checkboxes">
+            <input type="checkbox" name="frontEndProjects" value=""> Front-End Projects<br>
+            <input type="checkbox" name="backEndProjects" value=""> Back-end Projects<br>
+            <input type="checkbox" name="dataVisualization" value=""> Data Visualization<br>
+            <input type="checkbox" name="challenges" value=""> Challenges<br>
+            <input type="checkbox" name="openSourceCommunity" value=""> Open Source Community<br>
+            <input type="checkbox" name="glitterHelpRooms" value=""> Glitter help rooms<br>
+            <input type="checkbox" name="videos" value=""> Videos<br>
+            <input type="checkbox" name="cityMeetups" value=""> City Meetups<br>
+            <input type="checkbox" name="wiki" value=""> Wiki<br>
+            <input type="checkbox" name="forum" value=""> Forum<br>
+            <input type="checkbox" name="additionalCourses" value=""> Additional Courses<br>
+          </ul>
+        </li>
+        <li>
+          <label for="comments">Any Comments or Suggestions?</label>
+          <textarea rows="3" id="comments" placeholder="Enter your comment here..."></textarea>
+        </li>
+        <li>
+          <button type="submit">Submit</button>
+        </li>
+      </ul>
     </form>
-  </div>
 </body>
 </html>
